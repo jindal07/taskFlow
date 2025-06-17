@@ -2,8 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Task Flow',
-    generator: 'v0.dev'
+  title: 'Task Flow'
 }
 
 export default function RootLayout({
