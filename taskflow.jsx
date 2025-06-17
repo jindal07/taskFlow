@@ -10,6 +10,7 @@ import AddTaskForm from "./components/AddTaskForm"
 import FilterSection from "./components/FilterSection"
 import TasksList from "./components/TasksList"
 import Footer from "./components/Footer"
+import TaskManagement from "./components/TaskManagement"
 
 export default function TaskFlow() {
   const { isDarkMode, toggleTheme } = useTheme()
@@ -22,6 +23,8 @@ export default function TaskFlow() {
     addTask,
     toggleTask,
     deleteTask,
+    clearAllTasks,
+    clearCompletedTasks,
     completedCount,
     activeCount,
   } = useTasks()
@@ -52,6 +55,13 @@ export default function TaskFlow() {
             setShowFilters={setShowFilters}
             tasks={tasks}
             activeCount={activeCount}
+            completedCount={completedCount}
+          />
+
+          <TaskManagement
+            tasks={tasks}
+            clearAllTasks={clearAllTasks}
+            clearCompletedTasks={clearCompletedTasks}
             completedCount={completedCount}
           />
 
